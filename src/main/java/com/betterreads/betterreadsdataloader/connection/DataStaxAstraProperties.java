@@ -1,4 +1,4 @@
-package connection;
+package com.betterreads.betterreadsdataloader.connection;
 
 import java.io.File;
 

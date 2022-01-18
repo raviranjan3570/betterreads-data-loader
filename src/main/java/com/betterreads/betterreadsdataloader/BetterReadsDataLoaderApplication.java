@@ -14,6 +14,8 @@ import com.betterreads.betterreadsdataloader.connection.DataStaxAstraProperties;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -25,6 +27,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
 public class BetterReadsDataLoaderApplication {
+
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private AuthorRepository repository;
@@ -52,6 +56,7 @@ public class BetterReadsDataLoaderApplication {
 					author.setPersonalName(jsonObject.optString("personal_name"));
 					author.setId(jsonObject.optString("key").replace("/authors/", ""));
 					repository.save(author);
+					logger.info("Saving author -> {}", author);
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}

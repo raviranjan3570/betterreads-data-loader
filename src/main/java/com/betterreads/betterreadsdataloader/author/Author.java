@@ -11,7 +11,7 @@ import org.springframework.data.cassandra.core.mapping.CassandraType.Name;
 @Table(value = "author_by_id")
 public class Author {
 
-    @Id 
+    @Id
     @PrimaryKeyColumn(name = "author_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private String id;
 
@@ -45,5 +45,10 @@ public class Author {
 
     public void setPersonalName(String personalName) {
         this.personalName = personalName;
+    }
+
+    @Override
+    public String toString() {
+        return "Author [id=" + id + ", name=" + name + ", personalName=" + personalName + "]";
     }
 }

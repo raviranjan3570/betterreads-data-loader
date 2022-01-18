@@ -4,7 +4,7 @@ spring:
       keyspace-name: main
       username: yLxJYJYCYkGdWCTeQcxudAjj
       password: nWF_HoKdK2fQ9TCnv8L8r-2OLMG58hHiOdHgwEZS_DrOHZheSJnTSQzrc5reNRGSnD+Ix-Nd6PFRtECDjo6SIAQwLxol-QNiqONdmAay89qlouhlNRmNBa-FXxSqg753
-      schema-action: create-if-not-exists
+      schema-action: recreate
       request:
         timeout: 10s
       connection:
@@ -21,3 +21,7 @@ astra.db:
     application.token: AstraCS:yLxJYJYCYkGdWCTeQcxudAjj:019564650052731f0c8e502942da106f31ac3d125471ccb1c0ccb0d2550889b0
 
 spring.main.allow-circular-references: true
+
+datadump.location:
+    authors: C:\Users\ravir\OneDrive\Source code\test-authors.txt
+    works: C:\Users\ravir\OneDrive\Source code\test-works.txt

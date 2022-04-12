@@ -1,27 +1,27 @@
-spring:
-  data:
-    cassandra:
-      keyspace-name: main
-      username: yLxJYJYCYkGdWCTeQcxudAjj
-      password: nWF_HoKdK2fQ9TCnv8L8r-2OLMG58hHiOdHgwEZS_DrOHZheSJnTSQzrc5reNRGSnD+Ix-Nd6PFRtECDjo6SIAQwLxol-QNiqONdmAay89qlouhlNRmNBa-FXxSqg753
-      schema-action: recreate
-      request:
-        timeout: 10s
-      connection:
-        connect-timeout: 10s
-        init-query-timeout: 10s
+#spring:
+#  data:
+#    cassandra:
+#      keyspace-name: main
+#      username:
+#      password:
+#      schema-action: create-if-not-exists
+#      request:
+#        timeout: 10s
+#      connection:
+#        connect-timeout: 10s
+#        init-query-timeout: 10s
 
-datastax.astra:
-    secure-connect-bundle: secure-connect-betterreads.zip
+#datastax.astra:
+#    secure-connect-bundle: secure-connect-betterreads.zip
 
-astra.db:
-    id: bbada442-7b18-49cc-a8d6-7bbacd4bff34
-    region: asia-south1
-    keyspace: main
-    application.token: AstraCS:yLxJYJYCYkGdWCTeQcxudAjj:019564650052731f0c8e502942da106f31ac3d125471ccb1c0ccb0d2550889b0
+#astra.db:
+#    id:
+#    region: asia-south1
+#    keyspace: main
+#    application.token:
 
 spring.main.allow-circular-references: true
 
-datadump.location:
-    authors: C:\Users\ravir\OneDrive\Source code\test-authors.txt
-    works: C:\Users\ravir\OneDrive\Source code\test-works.txt
+#datadump.location:
+#    authors: C:\Users\ravir\OneDrive\Source code\test-authors.txt
+#    works: C:\Users\ravir\OneDrive\Source code\test-works.txt

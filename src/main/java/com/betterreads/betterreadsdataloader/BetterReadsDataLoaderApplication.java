@@ -31,7 +31,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @SpringBootApplication
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
@@ -121,7 +120,7 @@ public class BetterReadsDataLoaderApplication {
 								.stream()
 								.map(id -> authorRepository.findById(id))
 								.map(optionalAuthor -> {
-									if (!optionalAuthor.isPresent())
+									if (optionalAuthor.isEmpty())
 										return "Unknown Author";
 									return optionalAuthor.get().getName();
 								}).collect(Collectors.toList());
